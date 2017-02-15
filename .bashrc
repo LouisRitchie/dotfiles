@@ -124,7 +124,6 @@ export PATH=/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
 # command to run on startup that will copy .bashrc, .bash_aliases, and 
 # .vimrc to dotfiles repo (to keep them updated - can I do this with ln?)
 
-if [ -f ~/repos/dotfiles/README.md ]; then
-  cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles
+if [ -f ~/repos/dotfiles/README.md ]; then 
+    cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles 
 fi
-#sup?
