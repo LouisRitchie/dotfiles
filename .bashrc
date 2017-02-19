@@ -113,7 +113,7 @@ fi
 export NVM_DIR="/home/chuck/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PS1='\e[0;32m\w\e[m $ '
+# export PS1='\e[0;32m\w\e[m $ '
 export PATH=$HOME/bin:$PATH
 export GOPATH=/home/chuck/work
 export PATH=/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:$GOPATH/bin
@@ -125,5 +125,5 @@ export PATH=/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
 # .vimrc to dotfiles repo (to keep them updated - can I do this with ln?)
 
 if [ -f ~/repos/dotfiles/README.md ]; then 
-    cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles 
+  cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles 
 fi

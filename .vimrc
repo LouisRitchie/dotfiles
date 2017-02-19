@@ -9,10 +9,10 @@ noremap <C-H> <C-W>h<C-W>_
 noremap <C-L> <C-W>l<C-W>_
 
 
-set tabstop=8
+set tabstop=4
 set softtabstop=0
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 
 set hlsearch
 
