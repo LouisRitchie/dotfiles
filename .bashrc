@@ -129,7 +129,7 @@ if [ -f ~/repos/dotfiles/README.md ]; then
 fi
 
 if [ -x ~/Documents/school/seng265/assignment_02/ ]; then
-  scp -r ~/Documents/school/seng265/assignment_02/ louisr@linux.csc.uvic.ca:~/assignment_02_home/
+  scp -r ~/Documents/school/seng265/assignment_02/ louisr@linux.csc.uvic.ca:~/assignment_02_home/ > .scp_output
 fi
 if [ -x ~/Documents/school/seng365/assignment_03/ ]; then
   scp -r ~/Documents/school/seng365/assignment_03/ louisr@linux.csc.uvic.ca:~/assignment_03_home/
