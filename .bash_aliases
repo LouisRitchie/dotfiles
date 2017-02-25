@@ -1,5 +1,5 @@
-# change directories
-alias so="cd Documents/school"
+# personal navigation/ergonomic aliases
+alias soc="cd Documents/school/csc226"
 alias sos="cd Documents/school/seng265"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -8,6 +8,8 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../../.."
+alias hu="vim"
+alias l="ls -A"
 
 # git aliases
 function gc() { git commit -m "$1"; }
@@ -27,24 +29,21 @@ alias gta="git stash apply"
 # java aliases
 alias jc="javac *.java -d ."
 function j() { java -cp . "$1.$1"; }
+# A handy Vim autocommand for auto compiling java files:
+# au BufWritePost *.java !javac *.java -d . && java -cp . NAME.NAME
 
 # latex aliases
 function te() { latex "$1".tex && dvipdf "$1".dvi; }
 
-# personal aliases
-alias hu="vim"
-alias l="ls -A"
-alias ssh1="ssh tito@deppth.me"
-alias ssh2="ssh louisr@linux.csc.uvic.ca"
-alias depvic="scp -r ~/repos/victoriaggj_landing/* angus@victoriaggj.com:~/repos/victoriaggj_landing/"
 alias get_asn_1="scp -r louisr@linux.csc.uvic.ca:~/assignment_01/ ~/Documents/school/seng365/assignment_01_school/"
 alias get_asn_2="scp -r louisr@linux.csc.uvic.ca:~/assignment_02/ ~/Documents/school/seng365/assignment_02_school/"
 alias get_asn_3="scp -r louisr@linux.csc.uvic.ca:~/assignment_03/ ~/Documents/school/seng365/assignment_03_school/"
-alias aero="cd ~/repos/aero/web-clients"
 
+# restart Linux's buggy network manager
 alias netrestart="sudo systemctl restart network-manager.service"
 
+# deploy various websites, and access various servers.
+alias depvic="scp -r ~/repos/victoriaggj_landing/* tito@deppth.me:/var/www/victoriaggj.com/html/"
 alias depwill="sudo scp -r ~/repos/detectify/* tito@deppth.me:/var/www/deppth.me"
-
-# for use with java in vim:
-# au BufWritePost *.java !javac *.java -d . && java -cp . NAME.NAME
+alias ssh1="ssh tito@deppth.me"
+alias ssh2="ssh louisr@linux.csc.uvic.ca"
