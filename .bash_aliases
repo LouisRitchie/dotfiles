@@ -37,6 +37,8 @@ alias l="ls -A"
 alias ssh1="ssh tito@deppth.me"
 alias ssh2="ssh louisr@linux.csc.uvic.ca"
 alias depvic="scp -r ~/repos/victoriaggj_landing/* angus@victoriaggj.com:~/repos/victoriaggj_landing/"
+alias get_asn_2="scp -r /assignment_03/ ~/Documents/school/seng365/assignment_02/"
+alias get_asn_3="scp -r /assignment_03/ ~/Documents/school/seng365/assignment_03/"
 alias aero="cd ~/repos/aero/web-clients"
 
 alias netrestart="sudo systemctl restart network-manager.service"
