@@ -27,7 +27,6 @@ alias gta="git stash apply"
 # java aliases
 alias jc="javac *.java -d ."
 function j() { java -cp . "$1.$1"; }
-function fuck() { var="$1"."$1"; }
 
 # latex aliases
 function te() { latex "$1".tex && dvipdf "$1".dvi; }
@@ -35,11 +34,9 @@ function te() { latex "$1".tex && dvipdf "$1".dvi; }
 # personal aliases
 alias hu="vim"
 alias l="ls -A"
-alias ssh1="ssh angus@victoriaggj.com"
-alias ssh2="ssh tito@deppth.me"
+alias ssh1="ssh tito@deppth.me"
+alias ssh2="ssh louisr@linux.csc.uvic.ca"
 alias depvic="scp -r ~/repos/victoriaggj_landing/* angus@victoriaggj.com:~/repos/victoriaggj_landing/"
-
-# uvic Aero navigation aliases
 alias aero="cd ~/repos/aero/web-clients"
 
 alias netrestart="sudo systemctl restart network-manager.service"
