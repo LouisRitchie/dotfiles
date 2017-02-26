@@ -35,9 +35,11 @@ function j() { java -cp . "$1.$1"; }
 # latex aliases
 function te() { latex "$1".tex && dvipdf "$1".dvi; }
 
-alias get_asn_1="scp -r louisr@linux.csc.uvic.ca:~/assignment_01/ ~/Documents/school/seng365/assignment_01_school/"
-alias get_asn_2="scp -r louisr@linux.csc.uvic.ca:~/assignment_02/ ~/Documents/school/seng365/assignment_02_school/"
-alias get_asn_3="scp -r louisr@linux.csc.uvic.ca:~/assignment_03/ ~/Documents/school/seng365/assignment_03_school/"
+# seng265
+alias put_asn2="scp -r ~/Documents/school/seng265/assignment_02/ louisr@linux.csc.uvic.ca:~/assignment_02_home/"
+alias put_asn3="scp -r ~/Documents/school/seng365/assignment_03/ louisr@linux.csc.uvic.ca:~/assignment_03_home/"
+alias get_asn2="scp -r louisr@linux.csc.uvic.ca:~/assignment_02/ ~/Documents/school/seng365/assignment_02_school/"
+alias get_asn3="scp -r louisr@linux.csc.uvic.ca:~/assignment_03/ ~/Documents/school/seng365/assignment_03_school/"
 
 # restart Linux's buggy network manager
 alias netrestart="sudo systemctl restart network-manager.service"
