@@ -1,6 +1,7 @@
 # personal navigation/ergonomic aliases
-alias soc="cd Documents/school/csc226"
-alias sos="cd Documents/school/seng265"
+alias soc="cd ~/Documents/school/csc226"
+alias sos="cd ~/Documents/school/seng265"
+alias c="cd ~/c"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -10,6 +11,7 @@ alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../../.."
 alias hu="vim"
 alias l="ls -A"
+alias b="cd -"
 
 # git aliases
 function gc() { git commit -m "$1"; }
