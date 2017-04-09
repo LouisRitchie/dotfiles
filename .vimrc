@@ -14,7 +14,7 @@ noremap <C-K> <C-W>k<C-W>_
 set tabstop=4
 set softtabstop=0
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 
 set hlsearch
 
