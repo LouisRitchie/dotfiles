@@ -12,6 +12,8 @@ alias ........="cd ../../../../../../../.."
 alias hu="vim"
 alias l="ls -A"
 alias b="cd -"
+alias showswap="find . -name '.*.swp'"
+alias killswap="find . -name '.*.swp' | xargs rm"
 
 # git aliases
 function gc() { git commit -m "$1"; }
