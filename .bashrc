@@ -114,6 +114,7 @@ export NVM_DIR="/home/chuck/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # export PS1='\e[0;32m\w\e[m $ '
+export CLUSTER_WORKERS="2"
 export PS1="[\w]\\$ "
 export PATH=$HOME/bin:$PATH
 export GOPATH=/home/chuck/work
