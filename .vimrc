@@ -28,3 +28,5 @@ highlight Normal ctermfg=black ctermbg=white
 set shell=/bin/bash\ -i
 
 set binary
+# e ++ff=dos
+# set ff=unix
