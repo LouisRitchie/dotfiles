@@ -110,7 +110,7 @@ if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
 
-export NVM_DIR="/home/chuck/.nvm"
+export NVM_DIR="/home/louis/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # export PS1='\e[0;32m\w\e[m $ '
