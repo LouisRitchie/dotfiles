@@ -130,3 +130,4 @@ export EDITOR='vim'
 if [ -f ~/repos/dotfiles/README.md ]; then 
   cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles 
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

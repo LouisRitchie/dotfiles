@@ -11,10 +11,9 @@ noremap <C-J> <C-W>j<C-W>_
 noremap <C-K> <C-W>k<C-W>_
 
 
-set tabstop=4
-set softtabstop=0
-set expandtab
+set tabstop=2
 set shiftwidth=2
+set expandtab
 
 set hlsearch
 
@@ -27,4 +26,3 @@ highlight Normal ctermfg=black ctermbg=white
 
 set shell=/bin/bash\ -i
 
-set binary
