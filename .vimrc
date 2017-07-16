@@ -20,9 +20,11 @@ set hlsearch
 set smarttab
 set number
 
-highlight LineNr ctermfg=brown ctermbg=white
-
-highlight Normal ctermfg=black ctermbg=white
+set t_Co=0
+set backspace=indent,eol,start
 
 set shell=/bin/bash\ -i
 
+set ruler
+
+set guifont=Consolas:h10

@@ -13,9 +13,10 @@ alias hu="vim"
 alias l="ls -A"
 alias b="cd -"
 alias ayy="fortune | cowsay | lolcat"
-alias re="cd ~/repos/web-app"
+alias re="cd ~/repos/reelgood"
 alias showswap="find . -name '.*.swp'"
 alias killswap="find . -name '.*.swp' | xargs rm"
+alias xx='exit'
 
 # git aliases
 function gc() { git commit -m "$1"; }
@@ -31,6 +32,7 @@ alias gl="git log"
 alias gd="git diff"
 alias gt="git stash"
 alias gta="git stash apply"
+alias gr="git reset"
 
 # java aliases
 alias jc="javac *.java -d ."
@@ -55,3 +57,4 @@ alias depvic="scp -r ~/repos/victoriaggj_landing/* tito@deppth.me:/var/www/victo
 alias depwill="sudo scp -r ~/repos/detectify/* tito@deppth.me:/var/www/deppth.me"
 alias ssh1="ssh tito@deppth.me"
 alias ssh2="ssh louisr@linux.csc.uvic.ca"
+alias ffmpeg="~/bin/ffmpeg/bin/ffmpeg/"

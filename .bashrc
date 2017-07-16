@@ -120,6 +120,7 @@ export PS1="[\w]\\$ "
 # export GOPATH=/home/chuck/work
 # export PATH=/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:$GOPATH/bin
 export EDITOR='vim'
+export PYTHON='c:/python27/'
 
 
 # source $HOME/.cargo/env
