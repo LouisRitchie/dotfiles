@@ -27,4 +27,6 @@ set shell=/bin/bash\ -i
 
 set ruler
 
+hi LineNr term=NONE
+
 set guifont=Consolas:h10
