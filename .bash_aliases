@@ -55,6 +55,4 @@ alias netrestart="sudo systemctl restart network-manager.service"
 # deploy various websites, and access various servers.
 alias depvic="scp -r ~/repos/victoriaggj_landing/* tito@deppth.me:/var/www/victoriaggj.com/html/"
 alias depwill="sudo scp -r ~/repos/detectify/* tito@deppth.me:/var/www/deppth.me"
-alias ssh1="ssh tito@deppth.me"
-alias ssh2="ssh louisr@linux.csc.uvic.ca"
-alias ffmpeg="~/bin/ffmpeg/bin/ffmpeg/"
+alias ssh1="ssh louis@louisritchie.com"
