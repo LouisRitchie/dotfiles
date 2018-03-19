@@ -7,14 +7,13 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../../.."
 alias hu="vim"
-alias l="ls -A"
-alias re="cd ~/repos/reelgood"
+alias l="ls -A --group-directories-first"
 alias xx='exit'
-alias g="rgrep"
+alias g="rgrep --exclude-dir node_modules"
+alias s="cd ~/repos/snake"
 
 # Git
 function gc() { npm run lint; git commit -m "$1"; }
-function clone() { git clone https://github.com/"$1"/"$2".git; }
 alias gm="git merge"
 alias gs="git status"
 alias ga="git add -A"
