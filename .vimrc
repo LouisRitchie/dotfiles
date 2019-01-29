@@ -26,8 +26,8 @@ set shiftwidth=2
 set expandtab
 
 " highlight column as grey
-set colorcolumn=110
-highlight ColorColumn ctermbg=darkgray
+set colorcolumn=120
+highlight ColorColumn ctermbg=lightgray
 
 set hlsearch
 
@@ -36,8 +36,6 @@ set number
 
 " set t_Co=0
 set backspace=indent,eol,start
-
-set shell=/bin/bash\ -i
 
 set ruler
 
@@ -50,7 +48,7 @@ set guifont=Ubuntu\ Mono\ 11
 " source ~/.vim/abstract.vim
 
 " macro to make javascript comment blocks quickly at 2 spaces in.
-   */C-C> i  /*
+nmap <C-C> i  /*   *   */
 
 
 
@@ -65,6 +63,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'w0rp/ale'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
@@ -73,4 +73,10 @@ call plug#end()
 " Linter configuration
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
+\ 'elixir': ['credo'],
 \}
+
+autocmd BufWritePost *.js AsyncRun -post=checktime ~/covault/frontend-app/node_modules/.bin/eslint --fix %
+autocmd BufWritePost *.jsx AsyncRun -post=checktime ~/covault/frontend-app/node_modules/.bin/eslint --fix %
+
+set shell=/bin/bash

@@ -7,7 +7,8 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../../.."
 alias hu="vim"
-alias l="ls -A --group-directories-first"
+alias l="ls"
+alias ll="ls -A --group-directories-first"
 alias xx='exit'
 alias g="rgrep --exclude-dir node_modules"
 alias s="cd ~/repos/snake"
@@ -50,3 +51,22 @@ a_copy () {
 
 # Create a new blank text document with the date and time as the filename.
 newJournal () { gvim ~/journal/$(date +%y-%m-%d_%H.%M.txt); }
+
+alias ff="./Downloads/firefox/firefox-bin"
+
+
+sarc () { # Search And Replace with Confirmation
+  FROM=$1
+  TO=$2
+  FILES=$(grep -rl "$FROM" *)
+  echo ""
+  echo "$FROM => $TO"
+  echo "-----------------------------------------------"
+  for SUBJECT_FILE in ${FILES//\\n/ } ; do
+      echo "$SUBJECT_FILE"
+      vim "$SUBJECT_FILE" -c "%s/$FROM/$TO/gc" -c "wq"
+  done
+  echo "-----------------------------------------------"
+  echo ""
+  echo "Done!"
+}

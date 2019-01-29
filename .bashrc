@@ -15,10 +15,6 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -116,9 +112,6 @@ export NVM_DIR="/home/louis/.nvm"
 # export PS1='\e[0;32m\w\e[m $ '
 export CLUSTER_WORKERS="2"
 export PS1="[\w]\\$ "
-# export PATH=$HOME/bin:$PATH
-# export GOPATH=/home/chuck/work
-# export PATH=/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:$GOPATH/bin
 export EDITOR='vim'
 export PYTHON='c:/python27/'
 
@@ -132,3 +125,15 @@ if [ -f ~/repos/dotfiles/README.md ]; then
   cp ~/.bashrc ~/.bash_aliases ~/.vimrc ~/repos/dotfiles 
 fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+export PATH="$PATH:$HOME/npm/bin"
+export PATH="$PATH:$HOME/.rubies/ruby-2.3.7/bin"
+
+# Stupid f**** set this to 1000 and 2000 respectively.
+# Do you know how many useful commands have been lost!?
+HISTSIZE=-1
+HISTFILESIZE=-1
