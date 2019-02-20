@@ -32,8 +32,9 @@ set smarttab
 " -------------------- COLOURS/APPEARANCE --------------------
 "
 set colorcolumn=120
-highlight ColorColumn ctermbg=lightgray
+hi ColorColumn ctermbg=lightgray
 hi Search cterm=NONE ctermfg=NONE ctermbg=48
+hi Visual cterm=NONE ctermfg=NONE ctermbg=49
 set ruler
 set guifont=Ubuntu\ Mono\ 11
 set hlsearch
