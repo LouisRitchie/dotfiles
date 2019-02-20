@@ -133,7 +133,6 @@ fi
 export PATH="$PATH:$HOME/npm/bin"
 export PATH="$PATH:$HOME/.rubies/ruby-2.3.7/bin"
 
-# Stupid f**** set this to 1000 and 2000 respectively.
-# Do you know how many useful commands have been lost!?
+# Unlimited Bash history, only available in bash 4.3 or greater
 HISTSIZE=-1
 HISTFILESIZE=-1
