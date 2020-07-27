@@ -1,6 +1,7 @@
-" filetype off
 " syntax off
 filetype plugin indent on
+
+set shell=/bin/bash
 
 
 " -------------------- NAVIGATION --------------------
@@ -13,10 +14,10 @@ nmap 9k 18k
 vmap 9j 18j
 vmap 9k 18k
 " move through tabs
-noremap <C-H> <C-W>h<C-W>_
-noremap <C-L> <C-W>l<C-W>_
-noremap <C-J> <C-W>j<C-W>_
-noremap <C-K> <C-W>k<C-W>_
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
 
 
 " -------------------- SPACES/TABS --------------------
@@ -31,17 +32,21 @@ set smarttab
 
 " -------------------- COLOURS/APPEARANCE --------------------
 "
-set colorcolumn=120
+" set colorcolumn=120
 hi ColorColumn ctermbg=lightgray
-hi Search cterm=NONE ctermfg=NONE ctermbg=48
-hi Visual cterm=NONE ctermfg=NONE ctermbg=49
+hi Search cterm=NONE ctermfg=235 ctermbg=48
+hi Visual cterm=NONE ctermfg=235 ctermbg=49
 set ruler
 set guifont=Ubuntu\ Mono\ 11
 set hlsearch
 set number
 " highlight column as grey
 " hi LineNr term=NONE
-" set t_Co=0
+set t_Co=256
+set background=light
+"
+hi SpellBad ctermfg=235 ctermbg=167
+hi SpellCap ctermfg=235 ctermbg=167
 
 
 " -------------------- MACROS --------------------
@@ -64,30 +69,35 @@ nmap <C-C> i  /*   *   */
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/vim-plug-plugins')
 
-Plug 'pangloss/vim-javascript'
+" Nice JSON formatting, like hiding the quotes around string keys and values.
 Plug 'elzr/vim-json'
-Plug 'mxw/vim-jsx'
+
+" css/scss/sass linting
+Plug 'stylelint/stylelint'
+
+" Javascript indentation and highlighting (not linting AFAICT)
+Plug 'pangloss/vim-javascript'
+
+" Linting
 Plug 'w0rp/ale'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'elixir-editors/vim-elixir'
-Plug 'tell-k/vim-autopep8'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'css',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'python',
+    \ 'html',
+    \ 'swift' ] }
 
 call plug#end()
 
+
 " -------------------- ALE --------------------
 "
-" Linter configuration
-let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'elixir': ['credo'],
-\ 'python': ['Autopep8'],
-\}
-
-
-
-" -------------------- ESLINT HACK --------------------
-"
-autocmd BufWritePost *.js AsyncRun -post=checktime ~/covault/frontend-app/node_modules/.bin/eslint --fix %
-autocmd BufWritePost *.jsx AsyncRun -post=checktime ~/covault/frontend-app/node_modules/.bin/eslint --fix %
-
-set shell=/bin/bash
+let b:ale_fixers = {'javascript': ['prettier', 'eslint'], 'json': ['prettier']}
+let b:ale_linters = {'javascript': ['prettier', 'eslint'], 'json': ['prettier']}
+let g:ale_fix_on_save = 1
