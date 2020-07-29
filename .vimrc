@@ -76,7 +76,8 @@ Plug 'elzr/vim-json'
 Plug 'stylelint/stylelint'
 
 " Javascript indentation and highlighting (not linting AFAICT)
-Plug 'pangloss/vim-javascript'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Linting
 Plug 'w0rp/ale'
